@@ -1,6 +1,7 @@
 
-import About from "@/view/About";
-import Home from "@/view/Home";
+import About from "../view/About";
+import Home from "../view/Home";
+import RouterTestVue from "../demo/RouterTestVue.vue"
 import VueRouter from "vue-router";
 
 
@@ -14,6 +15,11 @@ const routes = [
         path: '/',
         name: "home",
         component: Home
+    },
+    {
+        path: '/routerTestVue',
+        name: "routerTestVue",
+        component: RouterTestVue
     }
 ]
 

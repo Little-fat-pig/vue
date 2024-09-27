@@ -1,20 +1,21 @@
 <template>
-    <div class="out">
-        <div class="table">
-            <!--    <button @click="handleBackButton">dakjdja</button>-->
-            <el-table :data="tableData" style="width: 800px">
-                <el-table-column prop="date" label="日期" width="180">
-                    <template slot-scope="{row}"> {{row.date}}</template>
-                </el-table-column>
-                <el-table-column prop="name" label="姓名" width="180">
-                    <template slot-scope="{row}"> {{row.name}}</template>
-                </el-table-column>
-                <el-table-column prop="{row}" label="地址">
-                    <template slot-scope="{row}"> {{row.address}}</template>
-                </el-table-column>
-            </el-table>
-        </div>
-    </div>
+  <el-link type="primary" @click="getPassWord">跳转页面</el-link>
+<!--    <div class="out">-->
+<!--        <div class="table">-->
+<!--            &lt;!&ndash;    <button @click="handleBackButton">dakjdja</button>&ndash;&gt;-->
+<!--            <el-table :data="tableData" style="width: 800px">-->
+<!--                <el-table-column prop="date" label="日期" width="180">-->
+<!--                    <template slot-scope="{row}"> {{row.date}}</template>-->
+<!--                </el-table-column>-->
+<!--                <el-table-column prop="name" label="姓名" width="180">-->
+<!--                    <template slot-scope="{row}"> {{row.name}}</template>-->
+<!--                </el-table-column>-->
+<!--                <el-table-column prop="{row}" label="地址">-->
+<!--                    <template slot-scope="{row}"> {{row.address}}</template>-->
+<!--                </el-table-column>-->
+<!--            </el-table>-->
+<!--        </div>-->
+<!--    </div>-->
 </template>
 
 <script>
@@ -94,10 +95,17 @@
             }
         },
         name: "Home",
-        component: About
+        component: About,
         // mounted: {
         //     window.addEventListener('popstate', this.handleBackButton)
         // },
+      methods: {
+        getPassWord(){
+          this.$router.push("/routerTestVue")
+        }
+      }
+
+
         // methods: {
         //     handleBackButton() {
         //         console.log('返回上一层')
